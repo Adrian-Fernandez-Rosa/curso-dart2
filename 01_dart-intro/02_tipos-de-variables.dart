@@ -10,6 +10,7 @@ void main() {
 
   // dynamic -> puede cambiar de tipo, por defecto es nulo
 
+  // ignore: unused_local_variable
   dynamic errorMessage = 'Hola';
   errorMessage = true;
   errorMessage = [1, 2, 3, 4, 5];

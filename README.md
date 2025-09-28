@@ -12,7 +12,7 @@ Curso introductorio a **Dart **, el lenguaje detrás de Flutter 🚀
 - Ofrece **tipado fuerte y asíncronía**, facilitando la creación de código más robusto y mantenible.  
 
 
-## Late inicialización tardía
+## 🔹 Late inicialización tardía
 
 - Es conocido como inicialización tardia, late le dice a Dart que esa variable tendra un valor al momento de usarse, es responsabilidad del dev asegurar que eso se cumpla
 
@@ -37,3 +37,13 @@ late final myName ="Codifica";
   - ✅ Mejor autocompletado  
   - ✅ Menos bugs en runtime  
   - ✅ Código más mantenible  
+
+
+## 🔹 Uso de Maps
+
+
+Un Mapa es key - valor 
+
+[uso de mapas](01_dart-intro/03_uso_maps.dart)
+
+[Ejercicio Maps ABM](01_dart-intro/03b_ejercicioMaps.dart)
