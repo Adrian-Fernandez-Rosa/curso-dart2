@@ -14,7 +14,7 @@ Curso introductorio a **Dart **, el lenguaje detrás de Flutter 🚀
 
 ## Late inicialización tardía
 
-Es conocido como inicialización tardia, late le dice a Dart que esa variable tendra un valor al momento de usarse, es responsabilidad del dev asegurar que eso se cumpla
+- Es conocido como inicialización tardia, late le dice a Dart que esa variable tendra un valor al momento de usarse, es responsabilidad del dev asegurar que eso se cumpla
 
 ```dart
 late final myName ="Codifica";
@@ -22,3 +22,18 @@ late final myName ="Codifica";
  print('Hola mi nombre es $myName');
 
 ```
+
+- Con late final podés lograr lazy initialization → solo ocupa memosria cuando realmente se usa.
+
+[ejemplo 1 late](01_dart-intro/01_ejemplo1.dart)
+
+## 🔹 tipos de variables uso de dynamic type
+
+- [dynamic ](01_dart-intro/02_tipos-de-variables.dart)
+
+- **`dynamic`** → útil al recibir datos externos (JSON).  
+
+- Pero inmediatamente lo convertimos en un modelo **tipado (`User`)** para:  
+  - ✅ Mejor autocompletado  
+  - ✅ Menos bugs en runtime  
+  - ✅ Código más mantenible  
