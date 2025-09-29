@@ -76,3 +76,19 @@ Un Mapa es key - valor
 - Usá List cuando necesitás orden o duplicados.
 
 [Listas e Iterables y Sets](01_dart-intro/04_List_Iterables_y_sets.dart)
+
+## Funciones
+
+
+[Funciones](01_dart-intro/05_funciones.dart)
+
+
+```dart
+
+int sumaDosNumerosOpt(int a, [int? b]) {
+  b = b ?? 0; // si b no tiene valor ponelo en 0
+  return a + b;
+}
+
+
+```

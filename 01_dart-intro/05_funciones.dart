@@ -11,6 +11,12 @@ void main() {
   print('\n');
   print('\n');
   print('Lambda ${sumaDosNum(4, 2)}');
+  print('\n');
+
+  print('\n');
+
+  print('con Opcionales ${sumaDosNumerosOpt(124)}');
+  print('con Opcionales 2: ${sumaDosNumerosOpt(4, 6)}');
 }
 
 saludarAtodos() {
@@ -29,7 +35,6 @@ int sumaDosNumeros(int a, int b) {
 
 // Lo mismo pero usando Lambda
 int sumaDosNum(int a, int b) => a + b;
-
 
 // lo mismo pero con parametro opcional
 int sumaDosNumerosOpt(int a, [int? b]) {
