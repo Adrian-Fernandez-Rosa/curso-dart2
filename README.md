@@ -47,3 +47,32 @@ Un Mapa es key - valor
 [uso de mapas](01_dart-intro/03_uso_maps.dart)
 
 [Ejercicio Maps ABM](01_dart-intro/03b_ejercicioMaps.dart)
+
+## 🔹Listas, Iterables y Sets
+
+
+### Listas:
+
+```dart
+
+ final numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  print('Lista: $numeros');
+
+  // Saber cantidad de elementos
+
+  print('largo de la lista ${numeros.length}');
+
+  // Obtener el valor 1 de la lista
+
+  print('Index 0: ${numeros[0]}');
+  print('Primer elemento: ${numeros.first}');
+  print('Ultimo elemento: ${numeros.last}');
+
+  print('Listado en orden inverso ${numeros.reversed}');
+
+```
+
+- Usá List cuando necesitás orden o duplicados.
+
+[Listas e Iterables y Sets](01_dart-intro/04_List_Iterables_y_sets.dart)
