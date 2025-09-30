@@ -1,5 +1,10 @@
 void main() {
-  final persona1 = new Persona('Pamela1', '31234123');
+  final persona1 = new Persona(nombre: 'Adriano', dni: '444');
+
+//   print(
+//       'El nombre de la persona es: ${persona1.nombre} \n y su dni es ${persona1.dni}');
+//
+  print(persona1.toString());
 }
 
 class Persona {
@@ -12,5 +17,10 @@ class Persona {
   //   this.dni = pDni;
   // }
 
-  Persona(this.nombre, this.dni);
+  Persona({required this.nombre, required this.dni});
+
+@override
+  String toString() {
+    return 'El nombre es $nombre y el dni es $dni';
+  }
 }
