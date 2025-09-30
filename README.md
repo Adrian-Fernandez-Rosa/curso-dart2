@@ -94,9 +94,9 @@ Un Mapa es key - valor
 
 ```dart
 
-int sumaDosNumerosOpt(int a, [int? b]) {
+int sumaDosNumerosOpt(int a, [int? b]) { //int? b sin corchetes [] → es obligatorio pasar un segundo argumento, aunque sea null.
   b = b ?? 0; // si b no tiene valor ponelo en 0
-  return a + b;
+  return a + b; 
 }
 
 
@@ -108,3 +108,10 @@ int sumaDosNumerosOpt(int a, [int? b]) {
 
 ## Override
 
+Ejemplo con to string en archivo anterior
+
+## Constructores nombrados
+
+- En este ejemplo tenemos el caso de uso **casero** de que pasaria si recibimos un json de una api
+
+[Constructores nombrados](01_dart-intro/07_constructoresNombrados.dart)
