@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   print(saludarAtodos());
 
@@ -17,6 +19,13 @@ void main() {
 
   print('con Opcionales ${sumaDosNumerosOpt(124)}');
   print('con Opcionales 2: ${sumaDosNumerosOpt(4, 6)}');
+
+  print('\n');
+  print('\n');
+
+  print('soy un separador wiiiiiiiiiiiiiiiiiiiiiiiiiiiii');
+  print('\n');
+  print(saludaPersona(nombre: 'Adriatica'));
 }
 
 saludarAtodos() {
@@ -40,4 +49,10 @@ int sumaDosNum(int a, int b) => a + b;
 int sumaDosNumerosOpt(int a, [int? b]) {
   b = b ?? 0; // si b no tiene valor ponelo en 0
   return a + b;
+}
+
+// parametros con nombre
+
+String saludaPersona({required String nombre, String mensaje = 'Holus,'}) {
+  return '$mensaje bueee';
 }

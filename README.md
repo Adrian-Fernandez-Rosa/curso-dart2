@@ -1,5 +1,16 @@
 # 📘 curso-dart2  
-Curso introductorio a **Dart **, el lenguaje detrás de Flutter 🚀  
+Curso introductorio a **Dart**, el lenguaje detrás de Flutter 🚀  
+
+---
+
+## 📑 Índice
+- [¿Qué es Dart?](#-qué-es-dart)  
+- [Late inicialización tardía](#-late-inicialización-tardía)  
+- [Tipos de variables (dynamic type)](#-tipos-de-variables-uso-de-dynamic-type)  
+- [Uso de Maps](#-uso-de-maps)  
+- [Listas, Iterables y Sets](#listas-iterables-y-sets)  
+- [Funciones](#funciones)  
+- [Clases](#clases)  
 
 ---
 
@@ -11,7 +22,6 @@ Curso introductorio a **Dart **, el lenguaje detrás de Flutter 🚀
 - Funciona de forma **rápida en ARM y x64**, tanto en móviles como en escritorios y servidores.  
 - Ofrece **tipado fuerte y asíncronía**, facilitando la creación de código más robusto y mantenible.  
 
-
 ## 🔹 Late inicialización tardía
 
 - Es conocido como inicialización tardia, late le dice a Dart que esa variable tendra un valor al momento de usarse, es responsabilidad del dev asegurar que eso se cumpla
@@ -20,7 +30,6 @@ Curso introductorio a **Dart **, el lenguaje detrás de Flutter 🚀
 late final myName ="Codifica";
 
  print('Hola mi nombre es $myName');
-
 ```
 
 - Con late final podés lograr lazy initialization → solo ocupa memosria cuando realmente se usa.
@@ -92,3 +101,7 @@ int sumaDosNumerosOpt(int a, [int? b]) {
 
 
 ```
+
+## Clases
+
+[Clases](01_dart-intro/06_clases.dart)
