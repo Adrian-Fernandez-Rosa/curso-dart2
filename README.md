@@ -135,3 +135,9 @@ Un **assert** es una instrucción que se usa para **verificar condiciones en tie
 - Se usan para crear contratos y jerarquías claras.
 
 [Clases abstractas](01_dart-intro/09_classAbstract.dart)
+
+# Implements 
+
+- extends = relación fuerte de herencia, con código heredado y posibilidad de sobrescribir.
+
+- implements = relación débil de interfaz, obliga a implementar todo sin heredar nada. no se usa super porque no hay herencia  solo contrato
