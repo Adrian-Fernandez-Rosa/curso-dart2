@@ -115,3 +115,23 @@ Ejemplo con to string en archivo anterior
 - En este ejemplo tenemos el caso de uso **casero** de que pasaria si recibimos un json de una api
 
 [Constructores nombrados](01_dart-intro/07_constructoresNombrados.dart)
+
+## Aserciones . Asserts
+
+Un **assert** es una instrucción que se usa para **verificar condiciones en tiempo de ejecución durante el desarrollo**.  
+
+- Si la condición es **true** → no pasa nada.  
+- Si la condición es **false** → el programa lanza un **AssertionError** y se detiene.  
+
+👉 Sirve para **debug y validación temprana**.  
+👉 En producción (*modo release*) los **assert** se ignoran, o sea, **no consumen recursos**.  
+
+[ASSERT](01_dart-intro/08_GetterAndSetter.dart)
+
+## Clases Abstractas
+
+- No se pueden instanciar
+- Definen métodos abstractos que obligan a las subclases a implementarlos.
+- Se usan para crear contratos y jerarquías claras.
+
+[Clases abstractas](01_dart-intro/09_classAbstract.dart)
