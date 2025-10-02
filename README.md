@@ -172,3 +172,10 @@ void main() {
 - Si dos mixins tienen métodos con el mismo nombre, gana el último en la lista.
 
 [Ejemplo mixin herencia multiple](01_dart-intro/11_Mixins.dart)
+
+## Future
+
+Un Future representa principalmente el resultado de una operación asíncrona. Es una promesa de que pronto tendrás un valor. La promesa puede falla y hay que manejar la excepción. Los futures son un acuerdo 
+de que en el futuro tendrás un valor para ser usado.
+
+[Futures](01_dart-intro/12_future.dart)
