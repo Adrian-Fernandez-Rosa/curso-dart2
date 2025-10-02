@@ -8,11 +8,23 @@ Curso introductorio a **Dart**, el lenguaje detrás de Flutter 🚀
 - [Late inicialización tardía](#-late-inicialización-tardía)  
 - [Tipos de variables (dynamic type)](#-tipos-de-variables-uso-de-dynamic-type)  
 - [Uso de Maps](#-uso-de-maps)  
-- [Listas, Iterables y Sets](#listas-iterables-y-sets)  
+- [Listas, Iterables y Sets](#-listas-iterables-y-sets)  
 - [Funciones](#funciones)  
 - [Clases](#clases)  
+- [Override](#override)  
+- [Constructores nombrados](#constructores-nombrados)  
+- [Aserciones / Asserts](#aserciones--asserts)  
+- [Clases Abstractas](#clases-abstractas)  
+- [Implements](#implements)  
+- [Mixins](#mixins)  
+- [Future](#future)  
+- [Async / Await](#async-await)  
+- [Try / Catch / On / Finally](#try-catch-on--finally)  
+- [Streams](#streams)  
+- [Async Await (extra)](#async-await-1)  
 
 ---
+
 
 ## 🔹 ¿Qué es Dart?  
 
@@ -136,20 +148,25 @@ Un **assert** es una instrucción que se usa para **verificar condiciones en tie
 
 [Clases abstractas](01_dart-intro/09_classAbstract.dart)
 
-# Implements 
 
-- extends = relación fuerte de herencia, con código heredado y posibilidad de sobrescribir.
+## 🔹 Implements
 
-- implements = relación débil de interfaz, obliga a implementar todo sin heredar nada. no se usa super porque no hay herencia  solo contrato
+- **`extends`** → relación fuerte de herencia, con código heredado y posibilidad de sobrescribir.  
+- **`implements`** → relación débil de interfaz, obliga a implementar todo sin heredar nada.  
+  - ⚠️ No se usa `super` porque no hay herencia, solo contrato.  
 
 ## Mixins
 
 - Mixins es una solucion de Dart para  herencia multiple
 
-ejemplo:
+## 🔹 Mixins
 
+Los **Mixins** son la solución de Dart para simular **herencia múltiple**.  
+
+👉 Podés añadir funcionalidades a una clase sin necesidad de heredar de varias.  
+
+### Ejemplo
 ```dart
-
 mixin Volador {
   void mover() => print("Volando por los aires 🕊️");
 }
@@ -164,50 +181,71 @@ class Pato with Volador, Nadador {
 
 void main() {
   final pato = Pato();
-  pato.mover(); // Nadando en el agua
+  pato.mover(); // Nadando en el agua 🐟 (último mixin gana)
 }
 
 ```
 
-- Si dos mixins tienen métodos con el mismo nombre, gana el último en la lista.
+-### ⚡️ Nota sobre Mixins
+- Si **dos mixins** tienen métodos con el mismo nombre, **gana el último en la lista**.  
 
-[Ejemplo mixin herencia multiple](01_dart-intro/11_Mixins.dart)
+📎 [Ejemplo de mixin con herencia múltiple](01_dart-intro/11_Mixins.dart)
 
-## Future
+---
 
-Un Future representa principalmente el resultado de una operación asíncrona. Es una promesa de que pronto tendrás un valor. La promesa puede falla y hay que manejar la excepción. Los futures son un acuerdo 
-de que en el futuro tendrás un valor para ser usado.
+## 🔹 Future
+Un **Future** representa el resultado de una operación **asíncrona**.  
+Es como una **promesa**:  
+- ✅ Puede completarse con un valor.  
+- ❌ Puede fallar con una excepción.  
 
-[Future](01_dart-intro/12_future.dart)
+👉 Los **Futures** garantizan que en el futuro tendrás un valor (o un error) para usar.  
 
-## Async await
-
-Cuando usamos async obligamos a retornar un Future, es decir una funcion asincronica siempre devolvera un Future
-
-[Future Async, Mejorando codigo](01_dart-intro/12_future.dart)
+📎 [Ejemplo de Future](01_dart-intro/12_future.dart)
 
 
-## Try Catch, on , y finally
+## 🔹 Async / Await
+Cuando usamos `async` en una función, estamos obligados a retornar un **Future**.  
+Es decir: **toda función asincrónica siempre devolverá un Future**.
+
+📎 [Ejemplo: Future Async, mejorando código](01_dart-intro/12_future.dart)
+
+---
+
+## 🔹 Try / Catch / On / Finally
+Manejo de errores en Dart:  
 
 ```dart
+try {
+  final value = await httpGet('http...');
+  print('Éxito: $value');
+} on Exception {
+  print('Tenemos una excepción');
+} catch (err) {
+  print('Ops, algo terrible pasó: $err');
+} finally {
+  print('Fin del try/catch');
+}
 
- try {
-    final value = await httpGet('http...');
-    print('exito: $value');
-  } on Exception {
-    print('Tenemos una excepcion');
-  } catch (err) {
-    print('Ops algo terrible paso: $err');
-  } finally {
-    print('Fin del try y catch');
-  }
 ```
 
-## Streams
+## 🔹 Streams
 
-- Los streams pueden ser retornados y usados como objetos, funciones o métodos, son un flujo de información que puede estar emitiendo valores periódicamente, una única vez, o nunca.
+Un **Stream** en Dart representa un **flujo de datos asíncronos** que puede:  
+- Emitir valores **periódicamente** (ej: cada cierto tiempo).  
+- Emitir valores **una sola vez**.  
+- O incluso **nunca emitir nada**.  
 
- Un Stream podría verse como una manguera conectada a un tubo de agua, cuando abres el tubo el agua fluye, cada gota de agua sería una emisión del stream, la manguera puede nunca cerrarse, cerrarse o nunca abrirse
+---
+
+### 💡 Analogía
+Un **Stream** es como una **manguera conectada a un grifo de agua**:  
+- Cada **gota de agua** 💧 equivale a un valor emitido por el stream.  
+- El grifo puede estar:  
+  - 🚫 **cerrado** → nunca emite valores.  
+  - 💧 **abierto** → emite valores constantemente.  
+  - 🔒 **cerrarse después** → deja de emitir en algún momento.  
+
 
  ```dart
 
@@ -224,6 +262,12 @@ Stream<int> emitNumbers() {
 
 ```
 
-Al ejecutar el codigo anterior no sucede nada, porque para que funcione un stream debe existir un elemento escuchando.
+⚠️ **Nota importante sobre Streams**  
+Al ejecutar el código anterior **no sucede nada**, porque para que un `Stream` funcione debe existir un **listener** que lo escuche.  
 
-[stream](01_dart-intro/13_streams.dart)
+📎 [Ejemplo completo con Stream](01_dart-intro/13_streams.dart)
+
+---
+
+## 🔹 Async / Await
+📎 [Ejemplo de Async / Await](01_dart-intro/14_Async_Await.dart)
