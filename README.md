@@ -5,9 +5,9 @@ Curso introductorio a **Dart**, el lenguaje detrás de Flutter 🚀
 
 
 ## 📑 Índice
-- [¿Qué es Dart?](#qué-es-dart)
-- [Late inicialización tardía](#late-inicialización-tardía)
-- [Tipos de variables (dynamic type)](#tipos-de-variables-uso-de-dynamic-type)
+- [¿Qué es Dart?](#que-es-dart)
+- [Late inicialización tardía](#late-inicializacion-tardia)
+- [Tipos de variables (dynamic type)](#tipos-de-variables-dynamic-type)
 - [Uso de Maps](#uso-de-maps)
 - [Listas, Iterables y Sets](#listas-iterables-y-sets)
 - [Funciones](#funciones)
@@ -22,12 +22,12 @@ Curso introductorio a **Dart**, el lenguaje detrás de Flutter 🚀
 - [Async / Await](#async-await)
 - [Try / Catch / On / Finally](#try-catch-on-y-finally)
 - [Streams](#streams)
-- [Async Await (extra)](#async-await-1)
+- [Async / Await (extra)](#async-await-extra)
 
 
 ---
 
-
+<a id="que-es-dart"></a>
 ## 🔹 ¿Qué es Dart?  
 
 - **Lenguaje moderno de Google**, pensado para el desarrollo de aplicaciones rápidas y seguras.  
@@ -36,6 +36,8 @@ Curso introductorio a **Dart**, el lenguaje detrás de Flutter 🚀
 - Funciona de forma **rápida en ARM y x64**, tanto en móviles como en escritorios y servidores.  
 - Ofrece **tipado fuerte y asíncronía**, facilitando la creación de código más robusto y mantenible.  
 
+
+<a id="late-inicializacion-tardia"></a>
 ## 🔹 Late inicialización tardía
 
 - Es conocido como inicialización tardia, late le dice a Dart que esa variable tendra un valor al momento de usarse, es responsabilidad del dev asegurar que eso se cumpla
@@ -50,6 +52,7 @@ late final myName ="Codifica";
 
 [ejemplo 1 late](01_dart-intro/01_ejemplo1.dart)
 
+<a id="tipos-de-variables-dynamic-type"></a>
 ## 🔹 tipos de variables uso de dynamic type
 
 - [dynamic ](01_dart-intro/02_tipos-de-variables.dart)
@@ -61,7 +64,7 @@ late final myName ="Codifica";
   - ✅ Menos bugs en runtime  
   - ✅ Código más mantenible  
 
-
+<a id="uso-de-maps"></a>
 ## 🔹 Uso de Maps
 
 
@@ -71,6 +74,7 @@ Un Mapa es key - valor
 
 [Ejercicio Maps ABM](01_dart-intro/03b_ejercicioMaps.dart)
 
+<a id="listas-iterables-y-sets"></a>
 ## 🔹Listas, Iterables y Sets
 
 
@@ -150,7 +154,7 @@ Un **assert** es una instrucción que se usa para **verificar condiciones en tie
 
 [Clases abstractas](01_dart-intro/09_classAbstract.dart)
 
-
+<a id="implements"></a>
 ## 🔹 Implements
 
 - **`extends`** → relación fuerte de herencia, con código heredado y posibilidad de sobrescribir.  
@@ -194,7 +198,7 @@ void main() {
 📎 [Ejemplo de mixin con herencia múltiple](01_dart-intro/11_Mixins.dart)
 
 ---
-
+<a id="future"></a>
 ## 🔹 Future
 Un **Future** representa el resultado de una operación **asíncrona**.  
 Es como una **promesa**:  
@@ -205,7 +209,7 @@ Es como una **promesa**:
 
 📎 [Ejemplo de Future](01_dart-intro/12_future.dart)
 
-
+<a id="async-await"></a>
 ## 🔹 Async / Await
 Cuando usamos `async` en una función, estamos obligados a retornar un **Future**.  
 Es decir: **toda función asincrónica siempre devolverá un Future**.
@@ -214,6 +218,7 @@ Es decir: **toda función asincrónica siempre devolverá un Future**.
 
 ---
 
+<a id="try-catch-on-y-finally"></a>
 ## 🔹 Try / Catch / On / Finally
 Manejo de errores en Dart:  
 
@@ -230,7 +235,7 @@ try {
 }
 
 ```
-
+<a id="streams"></a>
 ## 🔹 Streams
 
 Un **Stream** en Dart representa un **flujo de datos asíncronos** que puede:  
@@ -270,6 +275,6 @@ Al ejecutar el código anterior **no sucede nada**, porque para que un `Stream` 
 📎 [Ejemplo completo con Stream](01_dart-intro/13_streams.dart)
 
 ---
-
+<a id="async-await-extra"></a>
 ## 🔹 Async / Await
 📎 [Ejemplo de Async / Await](01_dart-intro/14_Async_Await.dart)
