@@ -3,25 +3,27 @@ Curso introductorio a **Dart**, el lenguaje detrás de Flutter 🚀
 
 ---
 
+
 ## 📑 Índice
-- [¿Qué es Dart?](#-qué-es-dart)  
-- [Late inicialización tardía](#-late-inicialización-tardía)  
-- [Tipos de variables (dynamic type)](#-tipos-de-variables-uso-de-dynamic-type)  
-- [Uso de Maps](#-uso-de-maps)  
-- [Listas, Iterables y Sets](#-listas-iterables-y-sets)  
-- [Funciones](#funciones)  
-- [Clases](#clases)  
-- [Override](#override)  
-- [Constructores nombrados](#constructores-nombrados)  
-- [Aserciones / Asserts](#aserciones--asserts)  
-- [Clases Abstractas](#clases-abstractas)  
-- [Implements](#implements)  
-- [Mixins](#mixins)  
-- [Future](#future)  
-- [Async / Await](#async-await)  
-- [Try / Catch / On / Finally](#try-catch-on--finally)  
-- [Streams](#streams)  
-- [Async Await (extra)](#async-await-1)  
+- [¿Qué es Dart?](#qué-es-dart)
+- [Late inicialización tardía](#late-inicialización-tardía)
+- [Tipos de variables (dynamic type)](#tipos-de-variables-uso-de-dynamic-type)
+- [Uso de Maps](#uso-de-maps)
+- [Listas, Iterables y Sets](#listas-iterables-y-sets)
+- [Funciones](#funciones)
+- [Clases](#clases)
+- [Override](#override)
+- [Constructores nombrados](#constructores-nombrados)
+- [Aserciones / Asserts](#aserciones--asserts)
+- [Clases Abstractas](#clases-abstractas)
+- [Implements](#implements)
+- [Mixins](#mixins)
+- [Future](#future)
+- [Async / Await](#async-await)
+- [Try / Catch / On / Finally](#try-catch-on-y-finally)
+- [Streams](#streams)
+- [Async Await (extra)](#async-await-1)
+
 
 ---
 
