@@ -170,3 +170,5 @@ void main() {
 ```
 
 - Si dos mixins tienen métodos con el mismo nombre, gana el último en la lista.
+
+[Ejemplo mixin herencia multiple](01_dart-intro/11_Mixins.dart)
