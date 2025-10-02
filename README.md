@@ -185,3 +185,45 @@ de que en el futuro tendrás un valor para ser usado.
 Cuando usamos async obligamos a retornar un Future, es decir una funcion asincronica siempre devolvera un Future
 
 [Future Async, Mejorando codigo](01_dart-intro/12_future.dart)
+
+
+## Try Catch, on , y finally
+
+```dart
+
+ try {
+    final value = await httpGet('http...');
+    print('exito: $value');
+  } on Exception {
+    print('Tenemos una excepcion');
+  } catch (err) {
+    print('Ops algo terrible paso: $err');
+  } finally {
+    print('Fin del try y catch');
+  }
+```
+
+## Streams
+
+- Los streams pueden ser retornados y usados como objetos, funciones o métodos, son un flujo de información que puede estar emitiendo valores periódicamente, una única vez, o nunca.
+
+ Un Stream podría verse como una manguera conectada a un tubo de agua, cuando abres el tubo el agua fluye, cada gota de agua sería una emisión del stream, la manguera puede nunca cerrarse, cerrarse o nunca abrirse
+
+ ```dart
+
+ main() {
+  emitNumbers();
+}
+
+Stream<int> emitNumbers() {
+  return Stream.periodic(const Duration(seconds: 2), (val) {
+    print('Desde periodic: $val');
+    return val;
+  });
+}
+
+```
+
+Al ejecutar el codigo anterior no sucede nada, porque para que funcione un stream debe existir un elemento escuchando.
+
+[stream](01_dart-intro/13_streams.dart)
