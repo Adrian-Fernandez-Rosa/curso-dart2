@@ -141,3 +141,32 @@ Un **assert** es una instrucción que se usa para **verificar condiciones en tie
 - extends = relación fuerte de herencia, con código heredado y posibilidad de sobrescribir.
 
 - implements = relación débil de interfaz, obliga a implementar todo sin heredar nada. no se usa super porque no hay herencia  solo contrato
+
+## Mixins
+
+- Mixins es una solucion de Dart para  herencia multiple
+
+ejemplo:
+
+```dart
+
+mixin Volador {
+  void mover() => print("Volando por los aires 🕊️");
+}
+
+mixin Nadador {
+  void mover() => print("Nadando en el agua 🐟");
+}
+
+class Pato with Volador, Nadador {
+  void graznar() => print("Quack!");
+}
+
+void main() {
+  final pato = Pato();
+  pato.mover(); // Nadando en el agua
+}
+
+```
+
+- Si dos mixins tienen métodos con el mismo nombre, gana el último en la lista.
