@@ -178,4 +178,10 @@ void main() {
 Un Future representa principalmente el resultado de una operación asíncrona. Es una promesa de que pronto tendrás un valor. La promesa puede falla y hay que manejar la excepción. Los futures son un acuerdo 
 de que en el futuro tendrás un valor para ser usado.
 
-[Futures](01_dart-intro/12_future.dart)
+[Future](01_dart-intro/12_future.dart)
+
+## Async await
+
+Cuando usamos async obligamos a retornar un Future, es decir una funcion asincronica siempre devolvera un Future
+
+[Future Async, Mejorando codigo](01_dart-intro/12_future.dart)
